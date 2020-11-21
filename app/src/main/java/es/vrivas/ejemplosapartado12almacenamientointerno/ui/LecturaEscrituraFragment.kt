@@ -39,8 +39,9 @@ class LecturaEscrituraFragment : Fragment() {
             var mensaje = "Guardar fichero interno: \n"
             val ficheroInterno = OutputStreamWriter(
                 context?.openFileOutput(
-                    "fichero_interno.txt",
-                    Context.MODE_PRIVATE+Context.MODE_APPEND
+                    FILENAME,
+                    Context.MODE_PRIVATE
+                    //Context.MODE_PRIVATE+Context.MODE_APPEND // ¡Para añadir!
                 )
             )
             ficheroInterno.write("En un puerto italiano al pie de las montañas\n")
@@ -65,7 +66,7 @@ class LecturaEscrituraFragment : Fragment() {
                 "Leer fichero interno: \n"
         try {
             val ficheroInterno = InputStreamReader(
-                context?.openFileInput("fichero_interno.txt")
+                context?.openFileInput(FILENAME)
             )
             val buffer = BufferedReader(ficheroInterno)
             var numLinea = 0
@@ -97,5 +98,6 @@ class LecturaEscrituraFragment : Fragment() {
         fun newInstance() =
             LecturaEscrituraFragment().apply {
             }
+        const val FILENAME = "ejemplo_fichero_interno.txt"
     }
 }
