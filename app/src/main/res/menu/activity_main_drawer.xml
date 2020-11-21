@@ -7,5 +7,8 @@
         <item
             android:id="@+id/nav_raw"
             android:title="@string/fichero_raw" />
+        <item
+            android:id="@+id/nav_lectura_escritura"
+            android:title="@string/lectura_y_escritura" />
     </group>
 </menu>

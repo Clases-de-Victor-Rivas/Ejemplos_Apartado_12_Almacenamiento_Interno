@@ -10,4 +10,9 @@
         android:name="es.vrivas.ejemplosapartado12almacenamientointerno.ui.RawFragment"
         android:label="Fichero Raw"
         tools:layout="@layout/fragment_raw" />
+    <fragment
+        android:id="@+id/nav_lectura_escritura"
+        android:name="es.vrivas.ejemplosapartado12almacenamientointerno.ui.LecturaEscrituraFragment"
+        android:label="Lectura y escritura"
+        tools:layout="@layout/fragment_lectura_escritura" />
 </navigation>
