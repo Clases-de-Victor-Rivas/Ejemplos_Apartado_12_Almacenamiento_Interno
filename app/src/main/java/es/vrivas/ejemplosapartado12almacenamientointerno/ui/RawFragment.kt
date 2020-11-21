@@ -1,11 +1,10 @@
-package es.vrivas.ejemplosapartado12almacenamientointerno
+package es.vrivas.ejemplosapartado12almacenamientointerno.ui
 
 import es.vrivas.ejemplosapartado12almacenamientointerno.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_raw.*
@@ -37,10 +36,9 @@ class RawFragment : Fragment() {
         try {
             val ficheroRaw: InputStream = resources.openRawResource(R.raw.test_raw)
             val buffer = BufferedReader(InputStreamReader(ficheroRaw))
-            var linea: String=""
             var numLinea=0
             while (buffer.ready()) {
-                linea = buffer.readLine()
+                val linea = buffer.readLine()
                 mensaje += """
                 #${++numLinea}: $linea
                 
